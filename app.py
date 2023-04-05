@@ -1,8 +1,8 @@
 import streamlit as st
+import os
 import openai
 
-# Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 # Define a function to generate text using the OpenAI GPT-3 API
 def generate_text(prompt):
